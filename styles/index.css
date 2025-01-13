@@ -1,0 +1,61 @@
+:root{
+    --font-h1-size:4.125em;
+    --font-h2-size:4.75em;
+    --font-medium-size:1.5em;
+    --typeface-title:"Antique Legacy";
+    --typeface-body:"Antique Legacy Light";
+
+    --yellow:#FFC852;
+    --white:#FFFFFF;
+    --green:#00C46D;
+    --blue:#0064FF;
+    --black:#000000;
+
+    --textclr:var(--white);
+}
+
+@font-face {
+
+    font-family: "Antique Legacy Light";
+    src: url(../fonts/Antique-Legacy-Light.otf) format("opentype");
+    src: url(../fonts/Antique-Legacy-Light.woff2) format("woff2"),
+         url(../fonts/Antique-Legacy-Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+
+    font-family: "Antique Legacy Light";
+    src: url(../fonts/Antique-Legacy-Light-Italic.otf) format("opentype");
+    src: url(../fonts/Antique-Legacy-Light-Italic.woff2) format("woff2"),
+         url(../fonts/Antique-Legacy-Light-Italic.woff) format("woff");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+
+    font-family: "Parabole Display";
+    src: url(../fonts/parabole-displayregular.otf) format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background-color: var(--black);
+    color: var(--textclr);
+    font-family: var(--typeface-body);
+}
+
+h1{
+    font-size: var(--font-h1-size);
+    font-family: var(--typeface-title);
+}
+
+h2{
+    font-size: var(--font-h2-size);
+}
+
+.font{
+    font-family: "Antique Legacy";
+}
