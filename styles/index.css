@@ -58,6 +58,8 @@ h1 {
     font-family: var(--typeface-title);
     margin: calc(1/4)em;
     text-transform: uppercase;
+    overflow-wrap: break-word;
+    hyphens: manual;
 }
 
 h2 {
@@ -75,8 +77,8 @@ p {
 }
 
 /* Font Classes */
-.font {
-    font-family: "Parabole Display";
+h1 :last-child {
+    font-family: var(--typeface-title);
     color: var(--yellow);
 }
 
@@ -134,7 +136,9 @@ fig img{
 
 
 /* Foto Carousel, zoals gebruikt in https://www.w3schools.com/howto/howto_js_slideshow.asp */
-.carousel * {box-sizing:border-box}
+.carousel * {
+    box-sizing:border-box
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -152,18 +156,19 @@ fig img{
 .carouselbuttons{
   cursor: pointer;
   position: relative;
-  padding: 2em;
-  top: 25em;
+  top: 80vw;
   display:grid;
   grid-template-areas: "prev pad next";
   grid-template-columns: max-content 1fr max-content;
 }
 .carouselbuttons a{
-    color: white;
-    font-weight: bold;
-    transition: 0.6s ease;
     border-radius: 0 2em 2em 0;
-    user-select: none;
+}
+
+.carouselbuttons a svg{
+    min-width:2em;
+    width: 20vw;
+    max-width: 10em;
 }
 
 /* Position the "next button" to the right */
@@ -172,6 +177,7 @@ fig img{
 }
 .prev{
     grid-area: prev;
+    rotate:180deg;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -206,6 +212,8 @@ fig img{
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
+  position: relative;
+  z-index: -1;
 }
 
 @keyframes fade {
